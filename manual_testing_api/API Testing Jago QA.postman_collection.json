@@ -1,0 +1,2466 @@
+{
+	"info": {
+		"_postman_id": "e8eda417-31a9-4703-b30c-78bc0dde0480",
+		"name": "API Testing Jago QA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22360722"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer aa2bbb24d24bb5bce72dbd0ee00cc93ef1834e090f40b1947af76140528b1cd3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"jagocoba255@gmail.com\",\n    \"password\": \"jago1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://barru.pythonanywhere.com/login",
+					"protocol": "http",
+					"host": [
+						"barru",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login Success Email and Password Registered",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jagocoba@gmail.com\",\n    \"password\": \"jago123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/login",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 12:56:56 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"credentials\": {\n        \"access_token\": \"bcd8299b229e2c8aac4b542ae96e24632ad11125b52e9ce856309c525d0d6cb0\",\n        \"expired_in\": 1672322216,\n        \"refresh_token\": \"280225c7e808550270a2b3d410c2b270357f3826864e4e3cfa03d03ae056f57c\"\n    },\n    \"data\": \"Welcome michael\",\n    \"message\": \"Anda Berhasil Login\",\n    \"status\": \"SUCCESS_LOGIN\"\n}"
+				},
+				{
+					"name": "Login Failed Email Empty & Password Valid",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer aa2bbb24d24bb5bce72dbd0ee00cc93ef1834e090f40b1947af76140528b1cd3",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"\",\n    \"password\": \"jago123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/login",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 13:13:10 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "88"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Email tidak valid\",\n    \"message\": \"Cek kembali email anda\",\n    \"status\": \"FAILED_LOGIN\"\n}"
+				},
+				{
+					"name": "Login Failed Email Empty& Password Empty",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer aa2bbb24d24bb5bce72dbd0ee00cc93ef1834e090f40b1947af76140528b1cd3",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"\",\n    \"password\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/login",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 13:16:11 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "88"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Email tidak valid\",\n    \"message\": \"Cek kembali email anda\",\n    \"status\": \"FAILED_LOGIN\"\n}"
+				},
+				{
+					"name": "Login Failed Email Valid & Password Empty",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer aa2bbb24d24bb5bce72dbd0ee00cc93ef1834e090f40b1947af76140528b1cd3",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jagocoba@gmail.com\",\n    \"password\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/login",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 13:11:04 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "95"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"User's not found\",\n    \"message\": \"Email atau Password Anda Salah\",\n    \"status\": \"FAILED_LOGIN\"\n}"
+				},
+				{
+					"name": "Login Failed Email Not Registered and Password Random",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ikase.p@gmail.com\",\n    \"password\": \"sjdhakjsdhd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/login",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 14:17:45 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "95"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"User's not found\",\n    \"message\": \"Email atau Password Anda Salah\",\n    \"status\": \"FAILED_LOGIN\"\n}"
+				},
+				{
+					"name": "Login Failed Email Valid & Password Invalid",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jagocoba@gmail.com\",\n    \"password\": \"123125\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/login",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 12:57:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "95"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"User's not found\",\n    \"message\": \"Email atau Password Anda Salah\",\n    \"status\": \"FAILED_LOGIN\"\n}"
+				},
+				{
+					"name": "Login Failed Email Invalid & Password Valid",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jagocoba26126126@gmail.com\",\n    \"password\": \"jago123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/login",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 12:57:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "95"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"User's not found\",\n    \"message\": \"Email atau Password Anda Salah\",\n    \"status\": \"FAILED_LOGIN\"\n}"
+				},
+				{
+					"name": "Login Failed Email Over Max Length",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jagocobajagocobajagocobajagocobajagocobajagocobajagocoba@gmail.com\",\n    \"password\": \"jago123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/login",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "UNAUTHORIZED",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 15 Mar 2023 08:01:45 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "102"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Email/Password melebihin maksimal karakter\",\n    \"message\": \"Gagal Login\",\n    \"status\": \"FAILED_LOGIN\"\n}"
+				},
+				{
+					"name": "Login Failed Password Over Max Length",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jagocoba@gmail.com\",\n    \"password\": \"jago123jago123jago123jago123jago123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/login",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "UNAUTHORIZED",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 15 Mar 2023 08:01:45 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "102"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Email/Password melebihin maksimal karakter\",\n    \"message\": \"Gagal Login\",\n    \"status\": \"FAILED_LOGIN\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"jagocoba101@gmail.com\",\n    \"password\": \"jago1234\",\n    \"name\": \"jobako\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://barru.pythonanywhere.com/register",
+					"protocol": "http",
+					"host": [
+						"barru",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jagocoba@gmail.com\",\n    \"password\": \"jago123\",\n    \"name\": \"michael\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/register",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 11:48:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "74"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"berhasil\",\n    \"message\": \"created user!\",\n    \"status\": \"SUCCESS_REGISTER\"\n}"
+				},
+				{
+					"name": "Register Failed Email Empty",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"\",\n    \"password\": \"jago1234\",\n    \"name\": \"michael\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/register",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 12:25:39 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "110"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Email/Username/Password tidak boleh kosong\",\n    \"message\": \"Gagal Registrasi\",\n    \"status\": \"FAILED_REGISTER\"\n}"
+				},
+				{
+					"name": "Register Failed Password Empty",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jagocoba1@gmail.com\",\n    \"password\": \"\",\n    \"name\": \"michaelz\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/register",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 11:51:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "110"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Email/Username/Password tidak boleh kosong\",\n    \"message\": \"Gagal Registrasi\",\n    \"status\": \"FAILED_REGISTER\"\n}"
+				},
+				{
+					"name": "Register Failed Name Empty",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jagocoba12@gmail.com\",\n    \"password\": \"jago1234\",\n    \"name\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/register",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 11:51:48 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "110"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Email/Username/Password tidak boleh kosong\",\n    \"message\": \"Gagal Registrasi\",\n    \"status\": \"FAILED_REGISTER\"\n}"
+				},
+				{
+					"name": "Register Failed All Empty",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"\",\n    \"password\": \"\",\n    \"name\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/register",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 12:27:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "110"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Email/Username/Password tidak boleh kosong\",\n    \"message\": \"Gagal Registrasi\",\n    \"status\": \"FAILED_REGISTER\"\n}"
+				},
+				{
+					"name": "Register Failed Duplicate Email",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jagocoba@gmail.com\",\n    \"password\": \"jago12345\",\n    \"name\": \"michaele\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/register",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 11:52:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "109"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Email sudah terdaftar, gunakan Email lain\",\n    \"message\": \"Gagal Registrasi\",\n    \"status\": \"FAILED_REGISTER\"\n}"
+				},
+				{
+					"name": "Register Failed Invalid Email",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"acbcaojs123456\",\n    \"password\": \"jago123456\",\n    \"name\": \"michaeles\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/register",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 11:54:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "91"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Email tidak valid\",\n    \"message\": \"Cek kembali email anda\",\n    \"status\": \"FAILED_REGISTER\"\n}"
+				},
+				{
+					"name": "Register Failed Password Symbol",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jagocoba51@gmail.com\",\n    \"password\": \"!#$%&'()\",\n    \"name\": \"michaele\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/register",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 11:58:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "111"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Nama atau password tidak valid\",\n    \"message\": \"Tidak boleh mengandung symbol\",\n    \"status\": \"FAILED_REGISTER\"\n}"
+				},
+				{
+					"name": "Register Failed Name Symbol",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jagocoba52@gmail.com\",\n    \"password\": \"jago12345\",\n    \"name\": \"!#$%&'()\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/register",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 11:59:42 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "111"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Nama atau password tidak valid\",\n    \"message\": \"Tidak boleh mengandung symbol\",\n    \"status\": \"FAILED_REGISTER\"\n}"
+				},
+				{
+					"name": "Register Failed Email Over Max Length",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"LoremipsumdolorsitametconsectetueradipiscingelitAeneancommodoligulaegetdolorAeneanmassaCumsociisnatoquepenatibusetmagnisdisparturientmontesnasceturridiculusmusDonecquamfelisultriciesnecpellentesqueeupretiumquissemNullaconsequatmassaquisenimDonecpedejustofringillavelaliquetnecvulputateegetarcuInenimjustorhoncusutimperdietavenenatisvitaejustoNullamdictumfeliseupedemollispretiumIntegertincidunt@gmail.com\",\n    \"password\": \"jago12345\",\n    \"name\": \"michaleseu\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/register",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 12:10:56 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "91"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Email tidak valid\",\n    \"message\": \"Cek kembali email anda\",\n    \"status\": \"FAILED_REGISTER\"\n}"
+				},
+				{
+					"name": "Register Failed Password Over Max Length",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jagocoba53@gmail.com\",\n    \"password\": \"Loremipsumdolorsitamet,consectetueradipiscingelit.Aeneancommodoligulaegetdolor.Aeneanmassa.Cumsociisnatoquepenatibusetmagnisdisparturientmontes,nasceturridiculusmus.Donecquamfelis,ultriciesnec,pellentesqueeu,pretiumquis,sem.Nullaconsequatmassaquisenim.Donecpedejusto,fringillavel,aliquetnec,vulputateeget,arcu.Inenimjusto,rhoncusut,imperdieta,venenatisvitae,justo.Nullamdictumfeliseupedemollispretium.Integertincidunt\",\n    \"name\": \"michales\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/register",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 12:08:29 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "119"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Email/Username/Password melebihin maksimal karakter\",\n    \"message\": \"Gagal Registrasi\",\n    \"status\": \"FAILED_REGISTER\"\n}"
+				},
+				{
+					"name": "Register Failed Name Over Max Length",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jagocoba55@gmail.com\",\n    \"password\": \"jago12345\",\n    \"name\": \"Loremipsumdolorsitamet,consectetueradipiscingelit.Aeneancommodoligulaegetdolor.Aeneanmassa.Cumsociisnatoquepenatibusetmagnisdisparturientmontes,nasceturridiculusmus.Donecquamfelis,ultriciesnec,pellentesqueeu,pretiumquis,sem.Nullaconsequatmassaquisenim.Donecpedejusto,fringillavel,aliquetnec,vulputateeget,arcu.Inenimjusto,rhoncusut,imperdieta,venenatisvitae,justo.Nullamdictumfeliseupedemollispretium.Integertincidunt\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/register",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 29 Dec 2022 12:09:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "119"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Email/Username/Password melebihin maksimal karakter\",\n    \"message\": \"Gagal Registrasi\",\n    \"status\": \"FAILED_REGISTER\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://barru.pythonanywhere.com/list-user",
+					"protocol": "http",
+					"host": [
+						"barru",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"list-user"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "barru",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List User Success Without Params",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/list-user",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"list-user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Mar 2023 08:36:37 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"email\": \"sitampan@gmail.com\",\n            \"username\": \"tampan berani\"\n        },\n        {\n            \"email\": \"deinuritasari@gmail.com\",\n            \"username\": \"dwi nurita sari\"\n        },\n        {\n            \"email\": \"dnrinnes@gmail.com\",\n            \"username\": \"innes\"\n        },\n        {\n            \"email\": \"hidayatiyulvi@gmail.com\",\n            \"username\": \"yulvi\"\n        },\n        {\n            \"email\": \"dwinuritasari@gmail.com\",\n            \"username\": \"dwi nurita sari\"\n        }\n    ],\n    \"message\": \"List of registered users\",\n    \"pagination\": {\n        \"current_page\": 1,\n        \"limit_per_page\": 5,\n        \"total_data\": 2028\n    },\n    \"status\": \"SUCCESS_USER_LIST\"\n}"
+				},
+				{
+					"name": "List User Success Filter Username",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/list-user?username=michael&email",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"list-user"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "michael"
+								},
+								{
+									"key": "email",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Mar 2023 08:37:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "195"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"email\": \"jagocoba@gmail.com\",\n            \"username\": \"michael\"\n        }\n    ],\n    \"message\": \"List of registered users\",\n    \"pagination\": {\n        \"current_page\": 1,\n        \"limit_per_page\": 5,\n        \"total_data\": 1\n    },\n    \"status\": \"SUCCESS_USER_LIST\"\n}"
+				},
+				{
+					"name": "List User Success Filter Email",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/list-user?email=jagocoba@gmail.com",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"list-user"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "jagocoba@gmail.com"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Mar 2023 08:40:09 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "195"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"email\": \"jagocoba@gmail.com\",\n            \"username\": \"michael\"\n        }\n    ],\n    \"message\": \"List of registered users\",\n    \"pagination\": {\n        \"current_page\": 1,\n        \"limit_per_page\": 5,\n        \"total_data\": 1\n    },\n    \"status\": \"SUCCESS_USER_LIST\"\n}"
+				},
+				{
+					"name": "List User Success Match username & email",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/list-user?username=michael&email=jagocoba@gmail.com",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"list-user"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "michael"
+								},
+								{
+									"key": "email",
+									"value": "jagocoba@gmail.com"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Mar 2023 08:42:29 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "195"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"email\": \"jagocoba@gmail.com\",\n            \"username\": \"michael\"\n        }\n    ],\n    \"message\": \"List of registered users\",\n    \"pagination\": {\n        \"current_page\": 1,\n        \"limit_per_page\": 5,\n        \"total_data\": 1\n    },\n    \"status\": \"SUCCESS_USER_LIST\"\n}"
+				},
+				{
+					"name": "List User Success Filter & Pagination Page",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/list-user?username=test&email=&page=5&limit=26&total",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"list-user"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "test"
+								},
+								{
+									"key": "email",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "5"
+								},
+								{
+									"key": "limit",
+									"value": "26"
+								},
+								{
+									"key": "total",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Mar 2023 08:51:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"email\": \"rap-tes@gmail.com\",\n            \"username\": \"test1-ap\"\n        },\n        {\n            \"email\": \"raptes1@gmail.com\",\n            \"username\": \"test1-ap\"\n        },\n        {\n            \"email\": \"riaristia@gmail.com\",\n            \"username\": \"ria test\"\n        },\n        {\n            \"email\": \"rosaliakyaa497@gmail.com\",\n            \"username\": \"tester ganteng\"\n        },\n        {\n            \"email\": \"tddddddes@gmail.com\",\n            \"username\": \"tester ganteng\"\n        },\n        {\n            \"email\": \"tes1@gmail.com\",\n            \"username\": \"tester ganteng\"\n        },\n        {\n            \"email\": \"cek@gmail.com\",\n            \"username\": \"tester cantik\"\n        },\n        {\n            \"email\": \"tescek@gmail.com\",\n            \"username\": \"tester cantik\"\n        },\n        {\n            \"email\": \"23425235@gmail.com\",\n            \"username\": \"tester ganteng\"\n        },\n        {\n            \"email\": \"tus@gmail.com\",\n            \"username\": \"tester ganteng\"\n        },\n        {\n            \"email\": \"tus.3@gmail.com\",\n            \"username\": \"testerganteng\"\n        },\n        {\n            \"email\": \"tus.4@gmail.com\",\n            \"username\": \"testerganteng\"\n        },\n        {\n            \"email\": \"tus.5@gmail.com\",\n            \"username\": \"testerganteng\"\n        },\n        {\n            \"email\": \"tus.6@gmail.com\",\n            \"username\": \"tester ganteng\"\n        },\n        {\n            \"email\": \"tes23@gmail.com\",\n            \"username\": \"tester ganteng\"\n        },\n        {\n            \"email\": \"tester101@yopmail.com\",\n            \"username\": \"Tester 101\"\n        },\n        {\n            \"email\": \"testera@gmail.com\",\n            \"username\": \"tester\"\n        },\n        {\n            \"email\": \"irvan.novriansyah05@gmail.com\",\n            \"username\": \"testerajagan\"\n        },\n        {\n            \"email\": \"irvan.novriansyah@gmail.com\",\n            \"username\": \"testerajagan\"\n        },\n        {\n            \"email\": \"irvan@gmail.com\",\n            \"username\": \"testerajagan\"\n        },\n        {\n            \"email\": \"alipp@gmail.com\",\n            \"username\": \"testerajagan\"\n        },\n        {\n            \"email\": \"Irvann@gmail.com\",\n            \"username\": \"testerajagan\"\n        },\n        {\n            \"email\": \"tes22@gmail.com\",\n            \"username\": \"tester.ganteng\"\n        },\n        {\n            \"email\": \"TesteRjaboTetabek237190@gmail.com\",\n            \"username\": \"tester.cool\"\n        },\n        {\n            \"email\": \"tes223@gmail.com\",\n            \"username\": \"Testerganteng.\"\n        },\n        {\n            \"email\": \"mvadipraga@gmail.com\",\n            \"username\": \"Vtest1\"\n        }\n    ],\n    \"message\": \"List of registered users\",\n    \"pagination\": {\n        \"current_page\": 5,\n        \"limit_per_page\": 26,\n        \"total_data\": 130\n    },\n    \"status\": \"SUCCESS_USER_LIST\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Profile",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Authorization",
+						"value": "337364df3a8b9d563a6a54a82aac0abeecc2c976ad06eb55f348138d346aa05f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"tomy\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://barru.pythonanywhere.com/update-profile",
+					"protocol": "http",
+					"host": [
+						"barru",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"update-profile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Profile Success Name",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "02c786ce613cd4637adf024f120e58f9c692e62c34ca9e965653509cc33789d6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"tomy hans\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/update-profile",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"update-profile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Mar 2023 09:41:03 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "115"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Username Anda menjadi tomy hans\",\n    \"message\": \"Berhasil Perbarui Profile\",\n    \"status\": \"SUCCESS_UPDATE_PROFILE\"\n}"
+				},
+				{
+					"name": "Update Profile Success Password",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "b0e01116112ce094d414cff499a6e458e14fe2d3f8de16005a0da427ef72c880",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"jago123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/update-profile",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"update-profile"
+							]
+						}
+					},
+					"status": "INTERNAL SERVER ERROR",
+					"code": 500,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Mar 2023 09:45:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html"
+						},
+						{
+							"key": "Content-Length",
+							"value": "290"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>500 Internal Server Error</title>\n<h1>Internal Server Error</h1>\n<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>"
+				},
+				{
+					"name": "Update Profile Success Email",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "60d3b44887d9adf322e24aac161cdc9dbe1723435341ede2eaabfc9aa840a10a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jagocobayuk1251@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/update-profile",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"update-profile"
+							]
+						}
+					},
+					"status": "INTERNAL SERVER ERROR",
+					"code": 500,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Mar 2023 09:46:16 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html"
+						},
+						{
+							"key": "Content-Length",
+							"value": "290"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>500 Internal Server Error</title>\n<h1>Internal Server Error</h1>\n<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>"
+				},
+				{
+					"name": "Update Profile Failed Name Over Max Length",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "02c786ce613cd4637adf024f120e58f9c692e62c34ca9e965653509cc33789d6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"tomy hansssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/update-profile",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"update-profile"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Mar 2023 09:42:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "114"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Username melebihin maksimal karakter\",\n    \"message\": \"Gagal Update Profile\",\n    \"status\": \"FAILED_UPDATE_PROFILE\"\n}"
+				},
+				{
+					"name": "Update Profile Failed Name Empty",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "60d3b44887d9adf322e24aac161cdc9dbe1723435341ede2eaabfc9aa840a10a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/update-profile",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"update-profile"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Mar 2023 09:48:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "105"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Username tidak boleh kosong\",\n    \"message\": \"Gagal Update Profile\",\n    \"status\": \"FAILED_UPDATE_PROFILE\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "5bd47cba9f2c0723a25106522ee453bf88376d6eccbaa909817db6b951145cf5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"jago123yuks\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://barru.pythonanywhere.com/delete-user",
+					"protocol": "http",
+					"host": [
+						"barru",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"delete-user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete User Success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "5bd47cba9f2c0723a25106522ee453bf88376d6eccbaa909817db6b951145cf5",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"jago123yuks\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/delete-user",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"delete-user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Mar 2023 04:29:31 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "111"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Sedih melihatmu pergi michaelyuks\",\n    \"message\": \"Berhasil Hapus User\",\n    \"status\": \"SUCCESS_DELETE_PROFILE\"\n}"
+				},
+				{
+					"name": "Delete User Success Emaill,Password,Name",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "6b863034fedc0430f90a0e110515a159791983e0bc838dbfc959a00f164c9724",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jagocobayuk@gmail.com\",\n    \"password\": \"jago123yuk\",\n    \"name\": \"michaelyuk\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/delete-user",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"delete-user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Mar 2023 10:20:06 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "106"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Sedih melihatmu pergi tomyer\",\n    \"message\": \"Berhasil Hapus User\",\n    \"status\": \"SUCCESS_DELETE_PROFILE\"\n}"
+				},
+				{
+					"name": "Delete User Failed Password Wrong",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "6b863034fedc0430f90a0e110515a159791983e0bc838dbfc959a00f164c9724",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"jago123yuk4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/delete-user",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"delete-user"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Mar 2023 10:17:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "88"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Salah Password\",\n    \"message\": \"Gagal Hapus Akun\",\n    \"status\": \"FAILED_DELETE_PROFILE\"\n}"
+				},
+				{
+					"name": "Delete User Failed Password Empty",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "6b863034fedc0430f90a0e110515a159791983e0bc838dbfc959a00f164c9724",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/delete-user",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"delete-user"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Mar 2023 10:18:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "116"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"Email/Username/Password tidak boleh kosong\",\n    \"message\": \"Gagal Hapus Akun\",\n    \"status\": \"FAILED_DELETE_PROFILE\"\n}"
+				},
+				{
+					"name": "Delete User Failed Token Wrong",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "6b863034fedc0430f90a0e110515a159791983e0bc838dbfc959a00f164c9724s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"jago123yuk\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/delete-user",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"delete-user"
+							]
+						}
+					},
+					"status": "UNPROCESSABLE ENTITY",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Mar 2023 10:18:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "95"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"User's not found\",\n    \"message\": \"Email atau Password Anda Salah\",\n    \"status\": \"FAILED_LOGIN\"\n}"
+				},
+				{
+					"name": "Delete User Failed Email",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "6b863034fedc0430f90a0e110515a159791983e0bc838dbfc959a00f164c9724",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jagocobayuk@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/delete-user",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"delete-user"
+							]
+						}
+					},
+					"status": "INTERNAL SERVER ERROR",
+					"code": 500,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Mar 2023 10:19:31 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html"
+						},
+						{
+							"key": "Content-Length",
+							"value": "290"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>500 Internal Server Error</title>\n<h1>Internal Server Error</h1>\n<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>"
+				},
+				{
+					"name": "Delete User Failed Name",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "6b863034fedc0430f90a0e110515a159791983e0bc838dbfc959a00f164c9724",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"michaelyuk\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://barru.pythonanywhere.com/delete-user",
+							"protocol": "http",
+							"host": [
+								"barru",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								"delete-user"
+							]
+						}
+					},
+					"status": "INTERNAL SERVER ERROR",
+					"code": 500,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 13 Mar 2023 10:19:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html"
+						},
+						{
+							"key": "Content-Length",
+							"value": "290"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>500 Internal Server Error</title>\n<h1>Internal Server Error</h1>\n<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>"
+				}
+			]
+		}
+	]
+}

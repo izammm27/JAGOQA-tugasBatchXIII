@@ -1,0 +1,19 @@
+{
+  "name": "belajar_mocha",
+  "version": "1.0.0",
+  "description": "project untuk belajar mocha",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "izam",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.1.0",
+    "supertest": "^6.3.3"
+  }
+}
